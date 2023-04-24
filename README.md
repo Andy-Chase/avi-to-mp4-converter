@@ -1,42 +1,66 @@
-# avi-to-mp4-converter
+# AVI to MP4 Video Converter
+
 A simple AVI to MPEG convertor with simple instructions
 
-AVI to MP4 ConverterThis is a simple Python script to convert AVI video files to MP4 format using the moviepy library and ffmpeg.
+This Python script converts AVI videos to MP4 format. It uses the `moviepy` library and `ffmpeg` to perform the conversion.
 
-RequirementsPython 3.6 or later
-moviepy library
-ffmpeg executable
-InstallationInstall the moviepy library using pip:
+## Table of Contents
 
-Copy code
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Setting the FFMPEG Path](#setting-the-ffmpeg-path)
+  - [Setting the Input Folder Path](#setting-the-input-folder-path)
+- [Usage](#usage)
+
+## Requirements
+
+- Python 3.6 or higher
+- moviepy library
+- ffmpeg
+
+## Installation
+
+1. Install Python 3.6 or higher if not already installed.
+2. Install the moviepy library by running the following command in your terminal or command prompt:
+
+```bash
 pip install moviepy
 
 
-Install ffmpeg:
+3. Install FFmpeg:
 
-For Mac, use Homebrew:
+- For Mac:
+  1. Install Homebrew if you haven't already. Follow the instructions on the official website: https://brew.sh/
+  2. Install FFmpeg using Homebrew. Run the following command in Terminal:
+     ```
+     brew install ffmpeg
+     ```
 
-Copy code
-brew install ffmpeg
+- For Windows:
+  1. Download the FFmpeg executable from the official website: https://ffmpeg.org/download.html
+  2. Extract the downloaded archive to a folder (e.g., C:\ffmpeg)
+
+## Usage
+
+1. Edit the Python script, specifically the following lines:
+
+- Set the path to the FFmpeg executable:
+  ```
+  os.environ["IMAGEIO_FFMPEG_EXE"] = "/path/to/ffmpeg"
+  ```
+
+- Set the path to the input folder containing your AVI files:
+  ```
+  input_folder = "/path/to/input/folder"
+  ```
+
+2. Run the script using a terminal or command prompt:
+
+The script will create an output folder in the same location as the input folder with " MP4" added to the end. All converted videos will be saved in this folder.
+
+## License
+
+This project is licensed under the MIT License.
 
 
-For Windows, download the ffmpeg executable from the official website: https://ffmpeg.org/download.html
-Extract the downloaded archive to a folder (e.g., C:\ffmpeg).
-
-UsageSet the path to the ffmpeg executable in the Python script:
-
-For Mac, run which ffmpeg in the Terminal to find the path.
-For Windows, locate the ffmpeg.exe file inside the 'bin' folder of the extracted archive (e.g., C:\ffmpeg\bin\ffmpeg.exe).
-Replace the placeholder /path/to/ffmpeg in the script with the appropriate path on your system.
-
-Set the input folder path in the Python script:
-
-Locate the folder containing the AVI files.
-Copy the folder path and replace the placeholder Input_File in the script with the appropriate path on your system.
-Run the Python script:
-
-Copy code
-python avi_to_mp4_converter.py
-
-
-The script will convert all AVI files in the input folder to MP4 format and save them in a new folder named "input_folder MP4"
