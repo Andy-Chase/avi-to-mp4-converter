@@ -22,20 +22,18 @@ This Python script converts AVI videos to MP4 format. It uses the `moviepy` libr
 ## Installation
 
 1. Install Python 3.6 or higher if not already installed.
-2. Install the moviepy library by running the following command in your terminal or command prompt:
 
-```bash
-pip install moviepy
-
+2. Install the moviepy library by running the following command in your terminal or command prompt: 
+  pip install moviepy
 
 3. Install FFmpeg:
 
 - For Mac:
   1. Install Homebrew if you haven't already. Follow the instructions on the official website: https://brew.sh/
   2. Install FFmpeg using Homebrew. Run the following command in Terminal:
-     ```
-     brew install ffmpeg
-     ```
+     
+    brew install ffmpeg
+     
 
 - For Windows:
   1. Download the FFmpeg executable from the official website: https://ffmpeg.org/download.html
@@ -46,14 +44,14 @@ pip install moviepy
 1. Edit the Python script, specifically the following lines:
 
 - Set the path to the FFmpeg executable:
-  ```
+
   os.environ["IMAGEIO_FFMPEG_EXE"] = "/path/to/ffmpeg"
-  ```
+  
 
 - Set the path to the input folder containing your AVI files:
-  ```
+  
   input_folder = "/path/to/input/folder"
-  ```
+  
 
 2. Run the script using a terminal or command prompt:
 
